@@ -123,11 +123,41 @@ void limpiarBuffer() {
 
 int main() {
     std::cout << "--- Sistema IoT de Monitoreo Polimórfico ---\n";
+    std::cout << "\n[Verificando conexión con ESP32...]\n";
     
     ListaGeneral lista;
     RegistroSensores registro;
     SerialReader reader;
     bool serialAbierto = false;
+    
+    // Intentar abrir puerto serial para verificar ESP32
+    if (reader.begin(SERIAL_PORT, 115200)) {
+        std::cout << "✓ ESP32 conectado correctamente en " << SERIAL_PORT << "\n";
+        std::cout << "✓ Puerto serial abierto a 115200 baudios\n";
+        serialAbierto = true;
+        
+        // Intentar leer un dato para confirmar que está transmitiendo
+        std::cout << "[Verificando transmisión de datos...]\n";
+        SerialReader::Reading testReading;
+        if (reader.readNext(testReading)) {
+            if (testReading.type == 'T') {
+                std::cout << "✓ ESP32 transmitiendo datos: Temperatura = " << testReading.value.temp << "°C\n";
+            } else if (testReading.type == 'P') {
+                std::cout << "✓ ESP32 transmitiendo datos: Presión = " << testReading.value.pressure << " hPa\n";
+            }
+        } else {
+            std::cout << "⚠ Puerto abierto pero no se detectan datos del ESP32\n";
+            std::cout << "  Verifica que el firmware esté cargado en el ESP32\n";
+        }
+    } else {
+        std::cout << "✗ No se pudo conectar con ESP32 en " << SERIAL_PORT << "\n";
+        std::cout << "  El sistema funcionará sin ESP32 (solo lecturas manuales)\n";
+        std::cout << "  Para usar ESP32:\n";
+        std::cout << "    1. Conecta el ESP32 al puerto USB\n";
+        std::cout << "    2. Sube el firmware: cd firmware/esp32-arduino && pio run -t upload\n";
+        std::cout << "    3. Reinicia esta aplicación\n";
+    }
+    std::cout << "\n";
     
     int opcion = 0;
     
@@ -224,55 +254,67 @@ int main() {
                 std::cout << "\nOpción 4: Registrar Lectura (desde ESP32)\n";
                 
                 if (!serialAbierto) {
-                    std::cout << "Abriendo puerto serial " << SERIAL_PORT << "...\n";
+                    std::cout << "⚠ ESP32 no está conectado.\n";
+                    std::cout << "Intentando conectar al puerto serial " << SERIAL_PORT << "...\n";
                     if (!reader.begin(SERIAL_PORT, 115200)) {
-                        std::cerr << "Error: No se pudo abrir el puerto serial.\n";
-                        std::cerr << "Verifique que el ESP32 esté conectado.\n";
+                        std::cerr << "✗ Error: No se pudo abrir el puerto serial.\n";
+                        std::cerr << "  Verifique que:\n";
+                        std::cerr << "    - El ESP32 esté conectado al puerto USB\n";
+                        std::cerr << "    - El firmware esté cargado en el ESP32\n";
+                        std::cerr << "    - Tenga permisos en /dev/ttyUSB0 (dialout group)\n";
                         break;
                     }
                     serialAbierto = true;
+                    std::cout << "✓ Puerto serial abierto correctamente\n";
                 }
                 
                 std::cout << "Sensores disponibles:\n";
                 registro.listar();
-                std::cout << "\nEsperando datos del ESP32 (presione Enter para cancelar)...\n";
                 
-                SerialReader::Reading reading;
-                if (reader.readNext(reading)) {
-                    SensorBase* sensor = nullptr;
-                    
-                    if (reading.type == 'T') {
-                        // Buscar primer sensor de temperatura
-                        std::cout << "Dato recibido: Temperatura = " << reading.value.temp << "°C\n";
-                        std::cout << "Ingrese ID del sensor de temperatura para registrar: ";
-                        char id[50];
-                        std::cin.getline(id, sizeof(id));
-                        
-                        sensor = registro.buscar(id);
-                        SensorTemperatura* temp = dynamic_cast<SensorTemperatura*>(sensor);
-                        if (temp) {
-                            temp->registrarLectura(reading.value.temp);
-                            std::cout << "Lectura registrada en " << id << "\n";
+                // Modo multi-lectura: permite registrar varias lecturas en una misma sesión
+                char continuar = 's';
+                while (continuar == 's' || continuar == 'S') {
+                    std::cout << "\nEsperando dato del ESP32...\n";
+                    SerialReader::Reading reading;
+                    if (reader.readNext(reading)) {
+                        SensorBase* sensor = nullptr;
+                        if (reading.type == 'T') {
+                            std::cout << "Dato recibido: Temperatura = " << reading.value.temp << "°C\n";
+                            std::cout << "Ingrese ID del sensor de temperatura para registrar: ";
+                            char id[50];
+                            std::cin.getline(id, sizeof(id));
+                            sensor = registro.buscar(id);
+                            SensorTemperatura* temp = dynamic_cast<SensorTemperatura*>(sensor);
+                            if (temp) {
+                                temp->registrarLectura(reading.value.temp);
+                                std::cout << "Lectura registrada en " << id << "\n";
+                            } else {
+                                std::cout << "Error: Sensor no encontrado o no es de temperatura.\n";
+                            }
+                        } else if (reading.type == 'P') {
+                            std::cout << "Dato recibido: Presión = " << reading.value.pressure << " hPa\n";
+                            std::cout << "Ingrese ID del sensor de presión para registrar: ";
+                            char id[50];
+                            std::cin.getline(id, sizeof(id));
+                            sensor = registro.buscar(id);
+                            SensorPresion* pres = dynamic_cast<SensorPresion*>(sensor);
+                            if (pres) {
+                                pres->registrarLectura(reading.value.pressure);
+                                std::cout << "Lectura registrada en " << id << "\n";
+                            } else {
+                                std::cout << "Error: Sensor no encontrado o no es de presión.\n";
+                            }
                         } else {
-                            std::cout << "Error: Sensor no encontrado o no es de temperatura.\n";
+                            std::cout << "Dato recibido con tipo desconocido ('" << reading.type << "'), ignorado.\n";
                         }
-                    } else if (reading.type == 'P') {
-                        std::cout << "Dato recibido: Presión = " << reading.value.pressure << " hPa\n";
-                        std::cout << "Ingrese ID del sensor de presión para registrar: ";
-                        char id[50];
-                        std::cin.getline(id, sizeof(id));
-                        
-                        sensor = registro.buscar(id);
-                        SensorPresion* pres = dynamic_cast<SensorPresion*>(sensor);
-                        if (pres) {
-                            pres->registrarLectura(reading.value.pressure);
-                            std::cout << "Lectura registrada en " << id << "\n";
-                        } else {
-                            std::cout << "Error: Sensor no encontrado o no es de presión.\n";
-                        }
+                    } else {
+                        std::cout << "No se recibieron datos o timeout.\n";
                     }
-                } else {
-                    std::cout << "No se recibieron datos o timeout.\n";
+                    
+                    std::cout << "¿Registrar otra lectura? (s/n): ";
+                    char resp[8] = {0};
+                    std::cin.getline(resp, sizeof(resp));
+                    continuar = resp[0];
                 }
                 break;
             }

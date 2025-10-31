@@ -52,3 +52,5 @@ public:
 	 */
 	void registrarLectura(float valor) { historial.insertar(valor); }
 };
+
+#endif

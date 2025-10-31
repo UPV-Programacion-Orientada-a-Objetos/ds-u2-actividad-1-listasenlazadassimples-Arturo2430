@@ -51,3 +51,5 @@ public:
 	 */
 	void registrarLectura(int valor) { historial.insertar(valor); }
 };
+
+#endif
