@@ -1,0 +1,52 @@
+# CMake Build files
+build/
+build_demo
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Compiled binaries
+*.o
+*.a
+*.so
+*.out
+iot_polimorfico
+
+# IDE and Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PlatformIO
+firmware/esp32-arduino/.pio/
+firmware/esp32-arduino/.vscode/
+firmware/esp32-arduino/.pioenvs/
+firmware/esp32-arduino/.piolibdeps/
+firmware/esp32-arduino/lib/
+firmware/esp32-arduino/.clang_complete
+firmware/esp32-arduino/.gcc-flags.json
+
+# Documentation generated
+docs/html/
+docs/latex/
+docs/xml/
+
+# Temporary and log files
+*.log
+*.tmp
+*.bak
+
+# Python cache (if using any Python tools)
+__pycache__/
+*.pyc
+*.pyo
+
+# OS specific
+Thumbs.db
+desktop.ini
