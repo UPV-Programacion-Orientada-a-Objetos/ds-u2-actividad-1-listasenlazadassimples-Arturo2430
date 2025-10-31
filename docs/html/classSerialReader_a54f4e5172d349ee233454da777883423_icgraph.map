@@ -1,0 +1,8 @@
+<map id="SerialReader::close" name="SerialReader::close">
+<area shape="rect" id="Node000001" title="Cierra el puerto serial." alt="" coords="232,35,379,60"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="343,25,333,17,305,13,283,15,271,20,269,26,275,33,271,36,263,26,267,16,282,10,305,8,335,12,346,21"/>
+<area shape="rect" id="Node000002" href="$classSerialReader.html#a8e91038a4f4625d80c7e9f881feeeb9a" title="Abre el puerto serial." alt="" coords="20,5,169,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="218,38,169,31,170,26,219,33"/>
+<area shape="rect" id="Node000003" href="$classSerialReader_1_1SerialImpl.html#afc4323f5bc9523d9fa4afaa44d0a2057" title=" " alt="" coords="5,55,184,95"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="219,62,185,66,184,61,218,56"/>
+</map>

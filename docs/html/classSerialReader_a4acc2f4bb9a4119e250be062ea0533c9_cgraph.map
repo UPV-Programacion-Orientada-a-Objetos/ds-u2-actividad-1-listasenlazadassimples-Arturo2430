@@ -1,0 +1,5 @@
+<map id="SerialReader::readNext" name="SerialReader::readNext">
+<area shape="rect" id="Node000001" title="Lee la siguiente lectura del puerto serial." alt="" coords="5,5,179,31"/>
+<area shape="rect" id="Node000002" href="$structNodo.html#a4493573763a542aec41f8ed0047abb2b" title="Constructor del nodo." alt="" coords="227,5,325,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="179,15,213,15,213,21,179,21"/>
+</map>

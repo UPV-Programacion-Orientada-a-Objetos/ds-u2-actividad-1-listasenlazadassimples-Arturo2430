@@ -1,0 +1,27 @@
+\doxysection{Sensor\+Temperatura.\+h}
+\hypertarget{SensorTemperatura_8h_source}{}\label{SensorTemperatura_8h_source}\index{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/include/SensorTemperatura.h@{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/include/SensorTemperatura.h}}
+\mbox{\hyperlink{SensorTemperatura_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_SENSORTEMPERATURA\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_SENSORTEMPERATURA\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{SensorBase_8h}{SensorBase.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ListaSensor_8h}{ListaSensor.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensorTemperatura}{SensorTemperatura}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSensorBase}{SensorBase}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{structNodo}{ListaSensor<float>}}\ historial;\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSensorTemperatura_a46fc11fc81e60f3048fb9deb59e9716d}{SensorTemperatura}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structNodo}{nombre\_in}}\ =\ \textcolor{stringliteral}{"{}"{}})\ :\ \mbox{\hyperlink{classSensorBase}{SensorBase}}(\mbox{\hyperlink{structNodo}{nombre\_in}})\ \{\}}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classSensorTemperatura_a54a8c9b3942be8ebae93817353d5a001}{\string~SensorTemperatura}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorTemperatura_a36227dc500c6f8be7866cb0f396894b3}{procesarLectura}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorTemperatura_a95a263967c5f9a55da09be3b11c27c86}{imprimirInfo}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorTemperatura_a75a9d1899df3456b5df2b41b71551b62}{registrarLectura}}(\textcolor{keywordtype}{float}\ \mbox{\hyperlink{structNodo}{valor}})\ \{\ historial.insertar(\mbox{\hyperlink{structNodo}{valor}});\ \}}
+\DoxyCodeLine{00054\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,38 @@
+\doxysection{Sensor\+Base.\+h}
+\hypertarget{SensorBase_8h_source}{}\label{SensorBase_8h_source}\index{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/include/SensorBase.h@{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/include/SensorBase.h}}
+\mbox{\hyperlink{SensorBase_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_SENSORBASE\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_SENSORBASE\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensorBase}{SensorBase}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}[50];\ }
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSensorBase}{SensorBase}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classSensorBase_a5efcb380d69054d6fa40dabbb543c578}{\string~SensorBase}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorBase_a260f2a335329b86da709973579bbff1a}{setNombre}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{structNodo}{n}})\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{structNodo}{n}})\ \{\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}[0]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};\ \textcolor{keywordflow}{return};\ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ \mbox{\hyperlink{structNodo}{i}}\ =\ 0;}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (;\ \mbox{\hyperlink{structNodo}{n}}[\mbox{\hyperlink{structNodo}{i}}]\ \&\&\ \mbox{\hyperlink{structNodo}{i}}\ <\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}})-\/1;\ ++\mbox{\hyperlink{structNodo}{i}})\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}[\mbox{\hyperlink{structNodo}{i}}]\ =\ \mbox{\hyperlink{structNodo}{n}}[\mbox{\hyperlink{structNodo}{i}}];}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}}[\mbox{\hyperlink{structNodo}{i}}]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorBase_a7fbc0a5b444f7d16cd60ba873b8ec8e4}{procesarLectura}}()\ =\ 0;}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorBase_a7cf3aeb12b330c500e2a5136fa020eec}{imprimirInfo}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSensorBase_a7177a9145cb9c5d56bc1550f237af7bd}{printNombre}}();}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classSensorBase_ae96d193c623231a955756bceac482f9c}{getNombre}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classSensorBase_a843ba88809ed7b78942a0a4b1c484cf5}{nombre}};\ \}}
+\DoxyCodeLine{00073\ \};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_SENSORBASE\_H}}
+
+\end{DoxyCode}

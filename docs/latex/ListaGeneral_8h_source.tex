@@ -1,0 +1,40 @@
+\doxysection{Lista\+General.\+h}
+\hypertarget{ListaGeneral_8h_source}{}\label{ListaGeneral_8h_source}\index{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/include/ListaGeneral.h@{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/include/ListaGeneral.h}}
+\mbox{\hyperlink{ListaGeneral_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ arturo\ on\ 10/30/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_LISTAGENERAL\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_LISTAGENERAL\_H}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSensorBase}{SensorBase}};\ \textcolor{comment}{//\ forward\ declaration\ para\ evitar\ includes\ circulares}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNodoGeneral}{NodoGeneral}}\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classSensorBase}{SensorBase}}*\ \mbox{\hyperlink{structNodoGeneral_aa440aaf46d892fc8da81ec8ebbace2f7}{sensor}};\ }
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{structNodoGeneral}{NodoGeneral}}*\ \mbox{\hyperlink{structNodoGeneral_a56482750576c2333f08c0762ce3070cb}{siguiente}};\ }
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structNodoGeneral_ab13e52201b3885849abc6797b3328bd0}{NodoGeneral}}(\mbox{\hyperlink{classSensorBase}{SensorBase}}*\ s)\ :\ \mbox{\hyperlink{structNodoGeneral_aa440aaf46d892fc8da81ec8ebbace2f7}{sensor}}(s),\ \mbox{\hyperlink{structNodoGeneral_a56482750576c2333f08c0762ce3070cb}{siguiente}}(nullptr)\ \{\}}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00044\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classListaGeneral}{ListaGeneral}}\ \{}
+\DoxyCodeLine{00045\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{structNodoGeneral}{NodoGeneral}}*\ cabeza;\ }
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classListaGeneral_aefe7f2e9d5a3d272fde5d5504ca67987}{ListaGeneral}}()\ :\ cabeza(nullptr)\ \{\}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{classListaGeneral_a8a475c612f06490a224715a0275d0267}{\string~ListaGeneral}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaGeneral_ac623ed6167c54770a6c2ebe9960ae106}{insertar}}(\mbox{\hyperlink{classSensorBase}{SensorBase}}*\ sensor);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaGeneral_aa9c2590f8a7f11ceb7e219519b77280b}{procesarTodos}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classListaGeneral_a1679efeda4c866b5a6b9a6da64397f3a}{vacia}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ cabeza\ ==\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00081\ \};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_LISTAGENERAL\_H}}
+
+\end{DoxyCode}

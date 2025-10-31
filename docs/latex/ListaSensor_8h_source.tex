@@ -1,0 +1,87 @@
+\doxysection{Lista\+Sensor.\+h}
+\hypertarget{ListaSensor_8h_source}{}\label{ListaSensor_8h_source}\index{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/include/ListaSensor.h@{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/include/ListaSensor.h}}
+\mbox{\hyperlink{ListaSensor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_LISTASENSOR\_H}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_LISTASENSOR\_H}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00019\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structNodo}{Nodo}}\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ T\ \mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}};\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};\ }
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{structNodo_a4493573763a542aec41f8ed0047abb2b}{Nodo}}(\textcolor{keyword}{const}\ T\&\ d)\ :\ \mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}}(d),\ \mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}}(nullptr)\ \{\}}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00039\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classListaSensor}{ListaSensor}}\ \{}
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ cabeza;\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classListaSensor_add555365175bf2140b81b9a2b5a303f5}{ListaSensor}}()\ :\ cabeza(nullptr)\ \{\}}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classListaSensor_a1f0e57e514a2624a2473795bbd8fec8d}{\string~ListaSensor}}()\ \{\ \mbox{\hyperlink{classListaSensor_aad54be08957e4503b56cba2b9b15cef4}{clear}}();\ \}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaSensor_a81a90b67c74b6d5579f4d4cc35785433}{insertar}}(\textcolor{keyword}{const}\ T\&\ valor)\ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ nuevo\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{structNodo}{Nodo<T>}}(\mbox{\hyperlink{structNodo}{valor}});}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!cabeza)\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ cabeza\ =\ \mbox{\hyperlink{structNodo}{nuevo}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{it}}\ =\ cabeza;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{structNodo}{it}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}})\ \mbox{\hyperlink{structNodo}{it}}\ =\ \mbox{\hyperlink{structNodo}{it}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{it}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}}\ =\ \mbox{\hyperlink{structNodo}{nuevo}};}
+\DoxyCodeLine{00069\ \ \ \ \ \}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classListaSensor_a6837778a0a176fc5aa1a753e7878e146}{vacia}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ cabeza\ ==\ \textcolor{keyword}{nullptr};\ \}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classListaSensor_aad54be08957e4503b56cba2b9b15cef4}{clear}}()\ \{}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{it}}\ =\ cabeza;}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{structNodo}{it}})\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{sig}}\ =\ \mbox{\hyperlink{structNodo}{it}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{structNodo}{it}};}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{it}}\ =\ \mbox{\hyperlink{structNodo}{sig}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ cabeza\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{comment}{//\ Acceso\ basico}}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{classListaSensor_a01ab1591673279cb282fe06bb99ceda5}{head}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ cabeza;\ \}}
+\DoxyCodeLine{00092\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ Elimina\ el\ nodo\ con\ el\ valor\ minimo\ y\ devuelve\ true\ si\ se\ elimino}}
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classListaSensor_a7ba08c253a0166be67bd6cea7ec4689f}{eliminarMin}}(\mbox{\hyperlink{structNodo}{T}}\&\ \mbox{\hyperlink{structNodo}{out}})\ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!cabeza)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{prev}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{cur}}\ =\ cabeza;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{minPrev}}\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{Nodo<T>}}*\ \mbox{\hyperlink{structNodo}{minNode}}\ =\ cabeza;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{structNodo}{cur}})\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structNodo}{cur}}-\/>\mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}}\ <\ \mbox{\hyperlink{structNodo}{minNode}}-\/>\mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}})\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{minPrev}}\ =\ \mbox{\hyperlink{structNodo}{prev}};}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{minNode}}\ =\ \mbox{\hyperlink{structNodo}{cur}};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{prev}}\ =\ \mbox{\hyperlink{structNodo}{cur}};}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{cur}}\ =\ \mbox{\hyperlink{structNodo}{cur}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ eliminar\ minNode}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{structNodo}{minPrev}})\ \{}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{minPrev}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}}\ =\ \mbox{\hyperlink{structNodo}{minNode}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ minNode\ es\ cabeza}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ cabeza\ =\ \mbox{\hyperlink{structNodo}{minNode}}-\/>\mbox{\hyperlink{structNodo_a6691e5766a27432fad708189c11f679d}{siguiente}};}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structNodo}{out}}\ =\ \mbox{\hyperlink{structNodo}{minNode}}-\/>\mbox{\hyperlink{structNodo_ad2db7dbf78e797a2c4f4541619245d4f}{dato}};}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{structNodo}{minNode}};}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00120\ \ \ \ \ \}}
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//DS\_U2\_ACTIVIDAD\_1\_LISTASENLAZADASSIMPLES\_ARTURO2430\_LISTASENSOR\_H}}
+
+\end{DoxyCode}

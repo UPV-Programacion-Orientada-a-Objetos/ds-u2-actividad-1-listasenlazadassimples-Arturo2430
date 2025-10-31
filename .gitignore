@@ -33,8 +33,8 @@ firmware/esp32-arduino/.clang_complete
 firmware/esp32-arduino/.gcc-flags.json
 
 # Documentation generated
-docs/html/
-docs/latex/
+# docs/html/
+# docs/latex/
 docs/xml/
 
 # Temporary and log files

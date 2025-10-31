@@ -1,0 +1,127 @@
+\doxysection{/home/arturo/\+CLion\+Projects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/\+Arturo2430/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/main.cpp@{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/main.cpp}}
+
+
+Sistema IoT de Monitoreo Polimórfico con Menú Interactivo.  
+
+
+{\ttfamily \#include "{}Lista\+General.\+h"{}}\newline
+{\ttfamily \#include "{}Sensor\+Temperatura.\+h"{}}\newline
+{\ttfamily \#include "{}Sensor\+Presion.\+h"{}}\newline
+{\ttfamily \#include "{}Serial\+Reader.\+h"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSensorInfo}{Sensor\+Info}}
+\item 
+class \mbox{\hyperlink{classRegistroSensores}{Registro\+Sensores}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#\mbox{\hyperlink{structNodo}{define}} \mbox{\hyperlink{main_8cpp_ac08f8f916661bb5fc606373bea93d274}{SERIAL\+\_\+\+PORT}}~"{}/dev/\mbox{\hyperlink{structNodo}{tty\+USB0"{}}}
+\begin{DoxyCompactList}\small\item\em Puerto serial donde está conectado el ESP32. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}{mostrar\+Menu}} ()
+\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{main_8cpp_a63311a5db4f37e3cd3bd2e665b2364b0}{limpiar\+Buffer}} ()
+\item 
+\mbox{\hyperlink{structNodo}{int}} \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sistema IoT de Monitoreo Polimórfico con Menú Interactivo. 
+
+\begin{DoxyAuthor}{Author}
+Arturo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/10/2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8cpp_ac08f8f916661bb5fc606373bea93d274}\label{main_8cpp_ac08f8f916661bb5fc606373bea93d274} 
+\index{main.cpp@{main.cpp}!SERIAL\_PORT@{SERIAL\_PORT}}
+\index{SERIAL\_PORT@{SERIAL\_PORT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SERIAL\_PORT}{SERIAL\_PORT}}
+{\footnotesize\ttfamily \#\mbox{\hyperlink{structNodo}{define}} SERIAL\+\_\+\+PORT~"{}/dev/\mbox{\hyperlink{structNodo}{tty\+USB0"{}}}}
+
+
+
+Puerto serial donde está conectado el ESP32. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a63311a5db4f37e3cd3bd2e665b2364b0}\label{main_8cpp_a63311a5db4f37e3cd3bd2e665b2364b0} 
+\index{main.cpp@{main.cpp}!limpiarBuffer@{limpiarBuffer}}
+\index{limpiarBuffer@{limpiarBuffer}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{limpiarBuffer()}{limpiarBuffer()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{void}} limpiar\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{main_8cpp_a63311a5db4f37e3cd3bd2e665b2364b0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{main_8cpp_a63311a5db4f37e3cd3bd2e665b2364b0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{int}} main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e}\label{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e} 
+\index{main.cpp@{main.cpp}!mostrarMenu@{mostrarMenu}}
+\index{mostrarMenu@{mostrarMenu}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{mostrarMenu()}{mostrarMenu()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{void}} mostrar\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{main_8cpp_ac0aca0f34a52fbe7527a03517bc3347e_icgraph}
+\end{center}
+\end{figure}

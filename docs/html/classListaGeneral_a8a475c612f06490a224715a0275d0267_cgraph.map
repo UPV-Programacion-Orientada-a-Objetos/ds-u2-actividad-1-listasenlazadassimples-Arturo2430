@@ -1,0 +1,5 @@
+<map id="ListaGeneral::~ListaGeneral" name="ListaGeneral::~ListaGeneral">
+<area shape="rect" id="Node000001" title="Destructor Libera la memoria de todos los nodos y sensores (destrucción polimórfica)" alt="" coords="5,5,211,31"/>
+<area shape="rect" id="Node000002" href="$structNodo.html#a4493573763a542aec41f8ed0047abb2b" title="Constructor del nodo." alt="" coords="259,5,357,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,15,245,15,245,21,211,21"/>
+</map>

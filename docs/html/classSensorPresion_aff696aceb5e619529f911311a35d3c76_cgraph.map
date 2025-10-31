@@ -1,0 +1,9 @@
+<map id="SensorPresion::procesarLectura" name="SensorPresion::procesarLectura">
+<area shape="rect" id="Node000001" title="Procesa las lecturas de presión." alt="" coords="5,55,232,80"/>
+<area shape="rect" id="Node000002" href="$classSensorBase.html#ae96d193c623231a955756bceac482f9c" title="Obtiene el nombre del sensor." alt="" coords="280,5,459,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,52,290,31,291,36,184,57"/>
+<area shape="rect" id="Node000003" href="$classListaSensor.html#a01ab1591673279cb282fe06bb99ceda5" title=" " alt="" coords="301,55,438,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="232,65,287,65,287,70,232,70"/>
+<area shape="rect" id="Node000004" href="$structNodo.html#a4493573763a542aec41f8ed0047abb2b" title="Constructor del nodo." alt="" coords="320,104,419,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="184,77,307,102,306,107,183,83"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="/home/arturo/CLionProjects/ds&#45;u2&#45;actividad&#45;1&#45;listasenlazadassimples&#45;Arturo2430/include/ListaSensor.h" name="/home/arturo/CLionProjects/ds&#45;u2&#45;actividad&#45;1&#45;listasenlazadassimples&#45;Arturo2430/include/ListaSensor.h">
+<area shape="rect" id="Node000001" title="Implementación de lista enlazada simple genérica para almacenar lecturas de sensores." alt="" coords="325,5,623,60"/>
+<area shape="rect" id="Node000002" href="$SensorPresion_8h.html" title="Sensor de presión que almacena lecturas de tipo int." alt="" coords="165,108,463,163"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="422,69,357,110,355,106,420,65"/>
+<area shape="rect" id="Node000005" href="$SensorTemperatura_8h.html" title="Sensor de temperatura que almacena lecturas de tipo float." alt="" coords="487,108,784,163"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="529,65,594,106,592,110,526,69"/>
+<area shape="rect" id="Node000003" href="$main_8cpp.html" title="Sistema IoT de Monitoreo Polimórfico con Menú Interactivo." alt="" coords="327,211,624,265"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="369,168,434,208,432,213,366,172"/>
+<area shape="rect" id="Node000004" href="$SensorPresion_8cpp.html" title="Implementación del sensor de presión atmosférica." alt="" coords="5,211,303,265"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="262,172,197,213,195,208,260,168"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="584,172,519,213,516,208,581,168"/>
+<area shape="rect" id="Node000006" href="$SensorTemperatura_8cpp.html" title="Implementación del sensor de temperatura." alt="" coords="648,211,945,265"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="690,168,756,208,753,213,687,172"/>
+</map>

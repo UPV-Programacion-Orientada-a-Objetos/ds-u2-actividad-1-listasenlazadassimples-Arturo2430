@@ -1,0 +1,39 @@
+\doxysection{/home/arturo/\+CLion\+Projects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/\+Arturo2430/src/\+Serial\+Reader.cpp File Reference}
+\hypertarget{SerialReader_8cpp}{}\label{SerialReader_8cpp}\index{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/src/SerialReader.cpp@{/home/arturo/CLionProjects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/Arturo2430/src/SerialReader.cpp}}
+
+
+Implementación del lector serial para comunicación con ESP32.  
+
+
+{\ttfamily \#include "{}Serial\+Reader.\+h"{}}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Serial\+Reader.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SerialReader_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classSerialReader_1_1SerialImpl}{Serial\+Reader\+::\+Serial\+Impl}}
+\begin{DoxyCompactList}\small\item\em Implementación privada del lector serial (patrón PIMPL) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación del lector serial para comunicación con ESP32. 
+
+\begin{DoxyAuthor}{Author}
+Arturo 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+30/10/2025
+\end{DoxyDate}
+Implementa la comunicación serial usando llamadas POSIX (termios). Utiliza el patrón PIMPL para ocultar detalles específicos del sistema operativo. 

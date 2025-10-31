@@ -1,0 +1,13 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,60,107"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html#a63311a5db4f37e3cd3bd2e665b2364b0" title=" " alt="" coords="133,5,239,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,79,107,48,138,33,140,38,109,52,55,84"/>
+<area shape="rect" id="Node000003" href="$structNodo.html#a4493573763a542aec41f8ed0047abb2b" title="Constructor del nodo." alt="" coords="312,56,411,81"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="60,89,298,71,299,76,60,95"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ac0aca0f34a52fbe7527a03517bc3347e" title=" " alt="" coords="131,107,241,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="61,96,118,106,118,111,60,101"/>
+<area shape="rect" id="Node000005" href="$classSensorTemperatura.html#a75a9d1899df3456b5df2b41b71551b62" title="Registra una nueva lectura de temperatura." alt="" coords="108,157,264,197"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="53,104,109,141,124,148,121,153,107,146,50,109"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="232,28,304,49,302,55,230,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="230,104,302,83,304,88,232,109"/>
+</map>

@@ -1,0 +1,20 @@
+\chapter{Sistema IoT de Gestión Polimórfica de Sensores}
+\hypertarget{index}{}\label{index}\index{Sistema IoT de Gestión Polimórfica de Sensores@{Sistema IoT de Gestión Polimórfica de Sensores}}
+\hypertarget{index_intro_sec}{}\doxysection{\texorpdfstring{Introducción}{Introducción}}\label{index_intro_sec}
+Sistema de monitoreo de infraestructura crítica que registra, almacena y procesa lecturas de múltiples tipos de sensores (temperatura, presión) de manera unificada utilizando programación orientada a objetos avanzada.\hypertarget{index_features_sec}{}\doxysection{\texorpdfstring{Características Principales}{Características Principales}}\label{index_features_sec}
+
+\begin{DoxyItemize}
+\item {\bfseries{Polimorfismo}}\+: Gestión unificada de diferentes tipos de sensores mediante clase base abstracta
+\item {\bfseries{Listas Enlazadas Genéricas}}\+: Almacenamiento dinámico de lecturas con plantillas (templates)
+\item {\bfseries{Comunicación Serial}}\+: Recepción de datos desde ESP32 por puerto serial
+\item {\bfseries{Gestión Manual de Memoria}}\+: Implementación de Regla de los Tres/\+Cinco
+\item {\bfseries{Menú Interactivo}}\+: Interfaz de usuario para operaciones CRUD de sensores
+\end{DoxyItemize}\hypertarget{index_arch_sec}{}\doxysection{\texorpdfstring{Arquitectura}{Arquitectura}}\label{index_arch_sec}
+
+\begin{DoxyItemize}
+\item \doxylink{classSensorBase}{Sensor\+Base}\+: Clase base abstracta con métodos virtuales puros
+\item \doxylink{classSensorTemperatura}{Sensor\+Temperatura}, \doxylink{classSensorPresion}{Sensor\+Presion}\+: Clases derivadas concretas
+\item Lista\+Sensor$<$\+T$>$\+: Lista enlazada genérica template
+\item \doxylink{classListaGeneral}{Lista\+General}\+: Lista polimórfica de gestión de sensores
+\item \doxylink{classSerialReader}{Serial\+Reader}\+: Comunicación con ESP32 
+\end{DoxyItemize}

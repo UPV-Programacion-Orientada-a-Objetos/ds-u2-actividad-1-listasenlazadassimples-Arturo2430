@@ -1,0 +1,163 @@
+\doxysection{Serial\+Reader Class Reference}
+\hypertarget{classSerialReader}{}\label{classSerialReader}\index{SerialReader@{SerialReader}}
+
+
+Lector de datos del puerto serial para comunicación con ESP32.  
+
+
+
+
+{\ttfamily \#include $<$Serial\+Reader.\+h$>$}
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structSerialReader_1_1Reading}{Reading}}
+\begin{DoxyCompactList}\small\item\em Estructura que representa una lectura del sensor. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSerialReader_1_1SerialImpl}{Serial\+Impl}}
+\begin{DoxyCompactList}\small\item\em Implementación privada del lector serial (patrón PIMPL) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSerialReader_a182a5d78dad1bbb57fe7e86ae68fea82}{Serial\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSerialReader_a3a5314ddbf65796603139fbec05c2cf6}{\texorpdfstring{$\sim$}{\string~}\+Serial\+Reader}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{bool}} \mbox{\hyperlink{classSerialReader_a8e91038a4f4625d80c7e9f881feeeb9a}{begin}} (\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{structNodo}{port}}, \mbox{\hyperlink{structNodo}{unsigned}} \mbox{\hyperlink{structNodo}{long}} \mbox{\hyperlink{structNodo}{baud}})
+\begin{DoxyCompactList}\small\item\em Abre el puerto serial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{void}} \mbox{\hyperlink{classSerialReader_a54f4e5172d349ee233454da777883423}{close}} ()
+\begin{DoxyCompactList}\small\item\em Cierra el puerto serial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{bool}} \mbox{\hyperlink{classSerialReader_a4acc2f4bb9a4119e250be062ea0533c9}{read\+Next}} (\mbox{\hyperlink{structSerialReader_1_1Reading}{Reading}} \&\mbox{\hyperlink{structNodo}{out}})
+\begin{DoxyCompactList}\small\item\em Lee la siguiente lectura del puerto serial. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structNodo}{bool}} \mbox{\hyperlink{classSerialReader_ac31c1bf2c0de9d80397b30728ca60489}{available}} () \mbox{\hyperlink{structNodo}{const}}
+\begin{DoxyCompactList}\small\item\em Verifica si hay datos disponibles en el buffer serial. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Lector de datos del puerto serial para comunicación con ESP32. 
+
+Maneja la comunicación serial con el ESP32, leyendo datos en formato "{}\+T,valor"{} para temperatura o "{}\+P,valor"{} para presión. Utiliza el patrón PIMPL para ocultar detalles de implementación del sistema operativo. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSerialReader_a182a5d78dad1bbb57fe7e86ae68fea82}\label{classSerialReader_a182a5d78dad1bbb57fe7e86ae68fea82} 
+\index{SerialReader@{SerialReader}!SerialReader@{SerialReader}}
+\index{SerialReader@{SerialReader}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{SerialReader()}{SerialReader()}}
+{\footnotesize\ttfamily Serial\+Reader\+::\+Serial\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+\Hypertarget{classSerialReader_a3a5314ddbf65796603139fbec05c2cf6}\label{classSerialReader_a3a5314ddbf65796603139fbec05c2cf6} 
+\index{SerialReader@{SerialReader}!````~SerialReader@{\texorpdfstring{$\sim$}{\string~}SerialReader}}
+\index{````~SerialReader@{\texorpdfstring{$\sim$}{\string~}SerialReader}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SerialReader()}{\string~SerialReader()}}
+{\footnotesize\ttfamily Serial\+Reader\+::\texorpdfstring{$\sim$}{\string~}\+Serial\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSerialReader_ac31c1bf2c0de9d80397b30728ca60489}\label{classSerialReader_ac31c1bf2c0de9d80397b30728ca60489} 
+\index{SerialReader@{SerialReader}!available@{available}}
+\index{available@{available}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{available()}{available()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{bool}} Serial\+Reader\+::available (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Verifica si hay datos disponibles en el buffer serial. 
+
+\begin{DoxyReturn}{Returns}
+true si hay datos por leer, false en caso contrario 
+\end{DoxyReturn}
+\Hypertarget{classSerialReader_a8e91038a4f4625d80c7e9f881feeeb9a}\label{classSerialReader_a8e91038a4f4625d80c7e9f881feeeb9a} 
+\index{SerialReader@{SerialReader}!begin@{begin}}
+\index{begin@{begin}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{bool}} Serial\+Reader\+::begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structNodo}{const}} \mbox{\hyperlink{structNodo}{char}} \texorpdfstring{$\ast$}{*}}]{port,  }\item[{\mbox{\hyperlink{structNodo}{unsigned}} \mbox{\hyperlink{structNodo}{long}}}]{baud }\end{DoxyParamCaption})}
+
+
+
+Abre el puerto serial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em port} & Ruta del puerto serial (ej\+: "{}/dev/tty\+USB0"{}) \\
+\hline
+{\em baud} & Velocidad en baudios (115200) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si se abrió correctamente, false en caso de error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classSerialReader_a8e91038a4f4625d80c7e9f881feeeb9a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSerialReader_a54f4e5172d349ee233454da777883423}\label{classSerialReader_a54f4e5172d349ee233454da777883423} 
+\index{SerialReader@{SerialReader}!close@{close}}
+\index{close@{close}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{void}} Serial\+Reader\+::close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cierra el puerto serial. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classSerialReader_a54f4e5172d349ee233454da777883423_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSerialReader_a54f4e5172d349ee233454da777883423_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classSerialReader_a4acc2f4bb9a4119e250be062ea0533c9}\label{classSerialReader_a4acc2f4bb9a4119e250be062ea0533c9} 
+\index{SerialReader@{SerialReader}!readNext@{readNext}}
+\index{readNext@{readNext}!SerialReader@{SerialReader}}
+\doxysubsubsection{\texorpdfstring{readNext()}{readNext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structNodo}{bool}} Serial\+Reader\+::read\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSerialReader_1_1Reading}{Reading}} \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Lee la siguiente lectura del puerto serial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Referencia donde se almacenará la lectura \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si se leyó correctamente, false si hay error o timeout
+\end{DoxyReturn}
+Formato esperado\+: "{}\+T,23.\+5"{} o "{}\+P,1013"{} Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classSerialReader_a4acc2f4bb9a4119e250be062ea0533c9_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/arturo/\+CLion\+Projects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/\+Arturo2430/include/\mbox{\hyperlink{SerialReader_8h}{Serial\+Reader.\+h}}\item 
+/home/arturo/\+CLion\+Projects/ds-\/u2-\/actividad-\/1-\/listasenlazadassimples-\/\+Arturo2430/src/\mbox{\hyperlink{SerialReader_8cpp}{Serial\+Reader.\+cpp}}\end{DoxyCompactItemize}

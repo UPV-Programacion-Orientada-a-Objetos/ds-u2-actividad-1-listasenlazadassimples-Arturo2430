@@ -1,0 +1,6 @@
+<map id="NodoGeneral" name="NodoGeneral">
+<area shape="rect" id="Node000001" title="Nodo para la lista general de sensores." alt="" coords="5,93,112,119"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="127,97,139,106,130,114,113,117,112,111,128,109,133,106,124,102"/>
+<area shape="rect" id="Node000002" href="$classSensorBase.html" title="Clase base abstracta que define la interfaz común para todos los sensores." alt="" coords="9,5,108,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,45,61,93,56,93,56,45"/>
+</map>

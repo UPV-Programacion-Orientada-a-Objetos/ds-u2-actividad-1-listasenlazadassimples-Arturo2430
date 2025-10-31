@@ -1,0 +1,5 @@
+<map id="ListaSensor::clear" name="ListaSensor::clear">
+<area shape="rect" id="Node000001" title="Elimina todos los nodos de la lista y libera memoria." alt="" coords="244,5,381,31"/>
+<area shape="rect" id="Node000002" href="$classListaSensor.html#a1f0e57e514a2624a2473795bbd8fec8d" title="Destructor Libera toda la memoria de los nodos (Regla de los Tres)" alt="" coords="5,5,196,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="231,21,196,21,196,15,231,15"/>
+</map>

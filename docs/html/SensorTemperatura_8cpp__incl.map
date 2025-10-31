@@ -1,0 +1,16 @@
+<map id="/home/arturo/CLionProjects/ds&#45;u2&#45;actividad&#45;1&#45;listasenlazadassimples&#45;Arturo2430/src/SensorTemperatura.cpp" name="/home/arturo/CLionProjects/ds&#45;u2&#45;actividad&#45;1&#45;listasenlazadassimples&#45;Arturo2430/src/SensorTemperatura.cpp">
+<area shape="rect" id="Node000001" title="Implementación del sensor de temperatura." alt="" coords="65,5,363,60"/>
+<area shape="rect" id="Node000002" href="$SensorTemperatura_8h.html" title="Sensor de temperatura que almacena lecturas de tipo float." alt="" coords="16,108,239,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="189,62,151,100,147,96,186,58"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="262,108,342,133"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="243,58,282,96,279,100,239,62"/>
+<area shape="rect" id="Node000003" href="$SensorBase_8h.html" title="Clase base abstracta para todos los sensores del sistema IoT." alt="" coords="5,181,116,207"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="118,135,83,173,79,169,114,132"/>
+<area shape="rect" id="Node000005" href="$ListaSensor_8h.html" title="Implementación de lista enlazada simple genérica para almacenar lecturas de sensores." alt="" coords="140,181,248,207"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="140,132,176,169,172,173,136,135"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="47,255,117,280"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="67,206,77,241,72,242,62,208"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="177,209,114,249,111,245,175,204"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="164,255,224,280"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="197,207,197,241,191,241,191,207"/>
+</map>

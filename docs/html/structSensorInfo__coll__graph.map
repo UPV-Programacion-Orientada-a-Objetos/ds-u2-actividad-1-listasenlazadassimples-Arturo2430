@@ -1,0 +1,6 @@
+<map id="SensorInfo" name="SensorInfo">
+<area shape="rect" id="Node000001" title=" " alt="" coords="9,93,100,119"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="114,97,123,100,127,106,118,114,100,117,100,111,116,109,121,106,120,104,113,102"/>
+<area shape="rect" id="Node000002" href="$classSensorBase.html" title="Clase base abstracta que define la interfaz común para todos los sensores." alt="" coords="5,5,104,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,45,57,93,52,93,52,45"/>
+</map>

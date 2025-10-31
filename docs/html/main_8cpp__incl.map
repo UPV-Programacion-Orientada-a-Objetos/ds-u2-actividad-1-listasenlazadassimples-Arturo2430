@@ -1,0 +1,27 @@
+<map id="/home/arturo/CLionProjects/ds&#45;u2&#45;actividad&#45;1&#45;listasenlazadassimples&#45;Arturo2430/main.cpp" name="/home/arturo/CLionProjects/ds&#45;u2&#45;actividad&#45;1&#45;listasenlazadassimples&#45;Arturo2430/main.cpp">
+<area shape="rect" id="Node000001" title="Sistema IoT de Monitoreo Polimórfico con Menú Interactivo." alt="" coords="272,5,569,60"/>
+<area shape="rect" id="Node000002" href="$ListaGeneral_8h.html" title="Lista de gestión polimórfica para sensores." alt="" coords="5,181,121,207"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="272,55,163,78,119,93,90,110,81,122,74,137,67,168,62,167,69,135,76,120,87,106,117,88,162,73,271,50"/>
+<area shape="rect" id="Node000004" href="$SensorTemperatura_8h.html" title="Sensor de temperatura que almacena lecturas de tipo float." alt="" coords="101,108,261,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="348,63,227,106,225,101,346,58"/>
+<area shape="rect" id="Node000008" href="$SensorPresion_8h.html" title="Sensor de presión que almacena lecturas de tipo int." alt="" coords="285,108,412,133"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="401,62,369,99,365,96,397,58"/>
+<area shape="rect" id="Node000009" href="$SerialReader_8h.html" title="Interfaz para comunicación serial con ESP32." alt="" coords="436,108,552,133"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="445,58,477,96,473,99,441,62"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="577,108,657,133"/>
+<area shape="poly" id="edge13_Node000001_Node000010" title=" " alt="" coords="482,58,579,100,577,105,479,63"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="681,108,739,133"/>
+<area shape="poly" id="edge14_Node000001_Node000011" title=" " alt="" coords="510,58,668,104,667,109,508,63"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="165,255,236,280"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,204,167,246,165,251,84,209"/>
+<area shape="rect" id="Node000005" href="$SensorBase_8h.html" title="Clase base abstracta para todos los sensores del sistema IoT." alt="" coords="145,181,256,207"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="187,133,196,167,191,169,181,134"/>
+<area shape="rect" id="Node000006" href="$ListaSensor_8h.html" title="Implementación de lista enlazada simple genérica para almacenar lecturas de sensores." alt="" coords="280,181,388,207"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="206,131,298,173,296,178,204,136"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="203,207,203,241,198,241,198,207"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="314,209,236,250,233,246,311,204"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="304,255,364,280"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="337,207,337,241,331,241,331,207"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="326,136,238,178,236,173,324,131"/>
+<area shape="poly" id="edge11_Node000008_Node000006" title=" " alt="" coords="349,134,342,168,337,167,344,133"/>
+</map>
