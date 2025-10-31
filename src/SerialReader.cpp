@@ -1,3 +1,13 @@
+/**
+ * @file SerialReader.cpp
+ * @brief Implementación del lector serial para comunicación con ESP32
+ * @author Arturo
+ * @date 30/10/2025
+ * 
+ * Implementa la comunicación serial usando llamadas POSIX (termios).
+ * Utiliza el patrón PIMPL para ocultar detalles específicos del sistema operativo.
+ */
+
 #include "SerialReader.h"
 #include <termios.h>
 #include <fcntl.h>
@@ -6,6 +16,12 @@
 #include <sys/ioctl.h>
 #include <iostream>
 
+/**
+ * @class SerialReader::SerialImpl
+ * @brief Implementación privada del lector serial (patrón PIMPL)
+ * 
+ * Encapsula los detalles específicos de la comunicación serial en Linux.
+ */
 class SerialReader::SerialImpl {
 public:
     int fd;

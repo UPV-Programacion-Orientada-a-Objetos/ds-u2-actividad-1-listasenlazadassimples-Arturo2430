@@ -1,10 +1,21 @@
-//
-// Created by automated edit
-//
+/**
+ * @file SensorTemperatura.cpp
+ * @brief Implementación del sensor de temperatura
+ * @author Arturo
+ * @date 30/10/2025
+ */
 
-#include "SensorTemperatura.h"
+#include "../include/SensorTemperatura.h"
 #include <iostream>
 
+/**
+ * @brief Procesa las lecturas de temperatura eliminando el mínimo y calculando promedio
+ * 
+ * Algoritmo:
+ * 1. Elimina la lectura más baja (posible valor anómalo)
+ * 2. Calcula el promedio de las lecturas restantes
+ * 3. Muestra información de liberación de memoria
+ */
 void SensorTemperatura::procesarLectura() {
     float eliminado = 0.0f;
     if (!historial.eliminarMin(eliminado)) {
@@ -34,6 +45,11 @@ void SensorTemperatura::procesarLectura() {
     std::cout << "    [Log] Nodo<float> " << eliminado << " liberado.\n";
 }
 
+/**
+ * @brief Imprime información del sensor de temperatura
+ * 
+ * Muestra el nombre y tipo del sensor en formato legible.
+ */
 void SensorTemperatura::imprimirInfo() const {
     std::cout << "--- Sensor de Temperatura ---" << std::endl;
     std::cout << "Nombre: " << nombre << std::endl;

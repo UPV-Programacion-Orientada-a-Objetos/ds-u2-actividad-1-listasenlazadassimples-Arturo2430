@@ -1,6 +1,33 @@
-//
-// Sistema IoT de Monitoreo Polimórfico con Menú Interactivo
-//
+/**
+ * @file main.cpp
+ * @brief Sistema IoT de Monitoreo Polimórfico con Menú Interactivo
+ * @author Arturo
+ * @date 30/10/2025
+ * 
+ * @mainpage Sistema IoT de Gestión Polimórfica de Sensores
+ * 
+ * @section intro_sec Introducción
+ * 
+ * Sistema de monitoreo de infraestructura crítica que registra, almacena y procesa
+ * lecturas de múltiples tipos de sensores (temperatura, presión) de manera unificada
+ * utilizando programación orientada a objetos avanzada.
+ * 
+ * @section features_sec Características Principales
+ * 
+ * - **Polimorfismo**: Gestión unificada de diferentes tipos de sensores mediante clase base abstracta
+ * - **Listas Enlazadas Genéricas**: Almacenamiento dinámico de lecturas con plantillas (templates)
+ * - **Comunicación Serial**: Recepción de datos desde ESP32 por puerto serial
+ * - **Gestión Manual de Memoria**: Implementación de Regla de los Tres/Cinco
+ * - **Menú Interactivo**: Interfaz de usuario para operaciones CRUD de sensores
+ * 
+ * @section arch_sec Arquitectura
+ * 
+ * - SensorBase: Clase base abstracta con métodos virtuales puros
+ * - SensorTemperatura, SensorPresion: Clases derivadas concretas
+ * - ListaSensor<T>: Lista enlazada genérica template
+ * - ListaGeneral: Lista polimórfica de gestión de sensores
+ * - SerialReader: Comunicación con ESP32
+ */
 #include "ListaGeneral.h"
 #include "SensorTemperatura.h"
 #include "SensorPresion.h"
@@ -8,7 +35,7 @@
 #include <iostream>
 #include <limits>
 
-#define SERIAL_PORT "/dev/ttyUSB0"
+#define SERIAL_PORT "/dev/ttyUSB0" ///< Puerto serial donde está conectado el ESP32
 
 // Estructura para almacenar sensores creados
 struct SensorInfo {
